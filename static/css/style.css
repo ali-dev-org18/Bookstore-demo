@@ -1,0 +1,14 @@
+:root {
+  --bg: #faf7f2;
+  --dark: #1a1a1a;
+  --accent: #c9a96e;
+}
+body { background: var(--bg); font-family: 'Segoe UI', sans-serif; }
+.card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.08); transition: transform .2s; }
+.card:hover { transform: translateY(-4px); }
+.book-cover { height: 260px; object-fit: cover; border-radius: 8px; }
+.price { color: var(--accent); font-weight: 700; }
+.old-price { text-decoration: line-through; color: #999; font-size: .9rem; }
+.hero { background: linear-gradient(135deg,#1a1a1a,#3a3a3a); color: #fff; padding: 60px 0; border-radius: 16px; }
+.btn-accent { background: var(--accent); color: #fff; border: none; }
+.btn-accent:hover { background: #b8935a; color: #fff; }

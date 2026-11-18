@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Order History{% endblock %}
+{% block content %}
+<h2>Order History</h2>
+<table class="table">
+  <thead><tr><th>#</th><th>Date</th><th>Total</th><th>Status</th><th></th></tr></thead>
+  <tbody>
+    {% for o in orders %}
+    <tr>
+      <td>{{ o.id }}</td>
+      <td>{{ o.created_at }}</td>
+      <td>${{ o.total_price }}</td>
+      <td>{{ o.get_status_display }}</td>
+      <td><a href="{% url 'orders:order_detail' o.id %}" class="btn btn-sm btn-outline-dark">View</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

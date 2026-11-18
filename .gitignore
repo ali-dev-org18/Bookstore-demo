@@ -1,0 +1,21 @@
+# Virtual muhit (eng muhimi)
+venv/
+env/
+.venv/
+
+# Ma'lumotlar bazasi (lokal test ma'lumotlari GitHub'ga chiqmasligi uchun)
+db.sqlite3
+
+# Python kesh fayllari
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Muhit o'zgaruvchilari (agar kelajakda ishlatsangiz)
+.env
+
+# VS Code sozlamalari
+.vscode/
+
+# Media fayllar (agar foydalanuvchilar yuklagan rasmlarni yashirmoqchi bo'lsangiz)
+# media/

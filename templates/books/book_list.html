@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Books{% endblock %}
+{% block content %}
+<h2 class="mb-3">Books</h2>
+<form method="get" class="row g-2 mb-4">
+  <div class="col-md-4"><input name="q" value="{{ q }}" class="form-control" placeholder="Search"></div>
+  <div class="col-md-3">
+    <select name="category" class="form-select">
+      <option value="">All categories</option>
+      {% for c in categories %}<option value="{{ c.slug }}" {% if current_category == c.slug %}selected{% endif %}>{{ c.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="col-md-3">
+    <select name="sort" class="form-select">
+      <option value="">Sort</option>
+      <option value="price_asc" {% if sort == 'price_asc' %}selected{% endif %}>Price asc</option>
+      <option value="price_desc" {% if sort == 'price_desc' %}selected{% endif %}>Price desc</option>
+      <option value="newest" {% if sort == 'newest' %}selected{% endif %}>Newest</option>
+    </select>
+  </div>
+  <div class="col-md-2"><button class="btn btn-dark w-100">Filter</button></div>
+</form>
+<div class="row g-3">
+  {% for b in books %}
+  <div class="col-md-3 col-6">
+    <div class="card h-100">
+      {% if b.cover %}<img src="{{ b.cover.url }}" class="card-img-top book-cover" alt="{{ b.title }}">{% endif %}
+      <div class="card-body">
+        <h6>{{ b.title }}</h6>
+        <p class="text-muted small">{{ b.author }}</p>
+        <p class="price">${{ b.current_price }}</p>
+        <a href="{% url 'books:book_detail' b.slug %}" class="btn btn-sm btn-outline-dark">View</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<nav class="mt-4">
+  <ul class="pagination justify-content-center">
+    {% if books.has_previous %}<li class="page-item"><a class="page-link" href="?page={{ books.previous_page_number }}">Prev</a></li>{% endif %}
+    {% if books.has_next %}<li class="page-item"><a class="page-link" href="?page={{ books.next_page_number }}">Next</a></li>{% endif %}
+  </ul>
+</nav>
+{% endblock %}

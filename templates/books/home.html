@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Home - BookStore{% endblock %}
+{% block content %}
+<div class="hero text-center mb-5">
+  <h1 class="display-4 fw-bold">Welcome to BookStore</h1>
+  <p class="lead">Discover your next favorite book</p>
+  <a href="{% url 'books:book_list' %}" class="btn btn-accent btn-lg">Browse Books</a>
+</div>
+
+<h3 class="mb-3">Categories</h3>
+<div class="row g-3 mb-5">
+  {% for c in categories %}
+  <div class="col-md-2 col-6">
+    <a href="{% url 'books:category_detail' c.slug %}" class="text-decoration-none">
+      <div class="card text-center p-3">{{ c.name }}</div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<h3 class="mb-3">Featured Books</h3>
+<div class="row g-3 mb-5">
+  {% for b in featured %}
+  <div class="col-md-3 col-6">
+    <div class="card h-100">
+      {% if b.cover %}<img src="{{ b.cover.url }}" class="card-img-top book-cover" alt="{{ b.title }}">{% endif %}
+      <div class="card-body">
+        <h6>{{ b.title }}</h6>
+        <p class="text-muted small">{{ b.author }}</p>
+        <p class="price">${{ b.current_price }}</p>
+        <a href="{% url 'books:book_detail' b.slug %}" class="btn btn-sm btn-outline-dark">View</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h3 class="mb-3">New Arrivals</h3>
+<div class="row g-3 mb-5">
+  {% for b in new_books %}
+  <div class="col-md-3 col-6">
+    <div class="card h-100">
+      {% if b.cover %}<img src="{{ b.cover.url }}" class="card-img-top book-cover" alt="{{ b.title }}">{% endif %}
+      <div class="card-body">
+        <h6>{{ b.title }}</h6>
+        <p class="text-muted small">{{ b.author }}</p>
+        <p class="price">${{ b.current_price }}</p>
+        <a href="{% url 'books:book_detail' b.slug %}" class="btn btn-sm btn-outline-dark">View</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h3 class="mb-3">Discounted</h3>
+<div class="row g-3">
+  {% for b in discounted %}
+  <div class="col-md-3 col-6">
+    <div class="card h-100">
+      {% if b.cover %}<img src="{{ b.cover.url }}" class="card-img-top book-cover" alt="{{ b.title }}">{% endif %}
+      <div class="card-body">
+        <h6>{{ b.title }}</h6>
+        <p class="text-muted small">{{ b.author }}</p>
+        <p><span class="price">${{ b.current_price }}</span> <span class="old-price">${{ b.price }}</span></p>
+        <a href="{% url 'books:book_detail' b.slug %}" class="btn btn-sm btn-outline-dark">View</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

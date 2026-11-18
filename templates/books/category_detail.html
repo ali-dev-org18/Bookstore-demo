@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}{{ category.name }}{% endblock %}
+{% block content %}
+<h2>{{ category.name }}</h2>
+<p>{{ category.description }}</p>
+<div class="row g-3">
+  {% for b in books %}
+  <div class="col-md-3 col-6">
+    <div class="card h-100">
+      {% if b.cover %}<img src="{{ b.cover.url }}" class="card-img-top book-cover" alt="{{ b.title }}">{% endif %}
+      <div class="card-body">
+        <h6>{{ b.title }}</h6>
+        <p class="price">${{ b.current_price }}</p>
+        <a href="{% url 'books:book_detail' b.slug %}" class="btn btn-sm btn-outline-dark">View</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
