@@ -1,0 +1,337 @@
+[
+{
+  "model": "books.category",
+  "pk": 1,
+  "fields": {
+    "name": "Fiction",
+    "slug": "fiction",
+    "description": "",
+    "created_at": "2026-11-19T09:12:11.941Z"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 2,
+  "fields": {
+    "name": "Science",
+    "slug": "science",
+    "description": "",
+    "created_at": "2026-11-19T09:12:11.949Z"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 3,
+  "fields": {
+    "name": "History",
+    "slug": "history",
+    "description": "",
+    "created_at": "2026-11-19T09:12:11.958Z"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 4,
+  "fields": {
+    "name": "Children",
+    "slug": "children",
+    "description": "",
+    "created_at": "2026-11-19T09:12:11.964Z"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 5,
+  "fields": {
+    "name": "Technology",
+    "slug": "technology",
+    "description": "",
+    "created_at": "2026-11-19T09:12:11.974Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 1,
+  "fields": {
+    "title": "The Great Gatsby",
+    "slug": "the-great-gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": 1,
+    "description": "A great book: The Great Gatsby by F. Scott Fitzgerald.",
+    "price": "12.99",
+    "discount_price": "9.99",
+    "cover": "",
+    "stock": 20,
+    "is_featured": true,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:11.982Z",
+    "updated_at": "2026-11-19T09:12:11.982Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 2,
+  "fields": {
+    "title": "1984",
+    "slug": "1984",
+    "author": "George Orwell",
+    "category": 1,
+    "description": "A great book: 1984 by George Orwell.",
+    "price": "11.50",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": true,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:11.991Z",
+    "updated_at": "2026-11-19T09:12:11.991Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 3,
+  "fields": {
+    "title": "A Brief History of Time",
+    "slug": "a-brief-history-of-time",
+    "author": "Stephen Hawking",
+    "category": 2,
+    "description": "A great book: A Brief History of Time by Stephen Hawking.",
+    "price": "15.00",
+    "discount_price": "12.00",
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": true,
+    "created_at": "2026-11-19T09:12:11.997Z",
+    "updated_at": "2026-11-19T09:12:11.997Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 4,
+  "fields": {
+    "title": "Sapiens",
+    "slug": "sapiens",
+    "author": "Yuval Noah Harari",
+    "category": 3,
+    "description": "A great book: Sapiens by Yuval Noah Harari.",
+    "price": "18.00",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": true,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.007Z",
+    "updated_at": "2026-11-19T09:12:12.007Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 5,
+  "fields": {
+    "title": "Python Crash Course",
+    "slug": "python-crash-course",
+    "author": "Eric Matthes",
+    "category": 5,
+    "description": "A great book: Python Crash Course by Eric Matthes.",
+    "price": "35.00",
+    "discount_price": "29.99",
+    "cover": "",
+    "stock": 20,
+    "is_featured": true,
+    "is_new": true,
+    "created_at": "2026-11-19T09:12:12.014Z",
+    "updated_at": "2026-11-19T09:12:12.014Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 6,
+  "fields": {
+    "title": "Clean Code",
+    "slug": "clean-code",
+    "author": "Robert C. Martin",
+    "category": 5,
+    "description": "A great book: Clean Code by Robert C. Martin.",
+    "price": "40.00",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.023Z",
+    "updated_at": "2026-11-19T09:12:12.023Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 7,
+  "fields": {
+    "title": "Harry Potter",
+    "slug": "harry-potter",
+    "author": "J.K. Rowling",
+    "category": 4,
+    "description": "A great book: Harry Potter by J.K. Rowling.",
+    "price": "14.00",
+    "discount_price": "10.50",
+    "cover": "",
+    "stock": 20,
+    "is_featured": true,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.030Z",
+    "updated_at": "2026-11-19T09:12:12.030Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 8,
+  "fields": {
+    "title": "The Hobbit",
+    "slug": "the-hobbit",
+    "author": "J.R.R. Tolkien",
+    "category": 1,
+    "description": "A great book: The Hobbit by J.R.R. Tolkien.",
+    "price": "13.00",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": true,
+    "created_at": "2026-11-19T09:12:12.038Z",
+    "updated_at": "2026-11-19T09:12:12.038Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 9,
+  "fields": {
+    "title": "Cosmos",
+    "slug": "cosmos",
+    "author": "Carl Sagan",
+    "category": 2,
+    "description": "A great book: Cosmos by Carl Sagan.",
+    "price": "16.00",
+    "discount_price": "13.00",
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.046Z",
+    "updated_at": "2026-11-19T09:12:12.046Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 10,
+  "fields": {
+    "title": "Guns Germs and Steel",
+    "slug": "guns-germs-and-steel",
+    "author": "Jared Diamond",
+    "category": 3,
+    "description": "A great book: Guns Germs and Steel by Jared Diamond.",
+    "price": "17.50",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.054Z",
+    "updated_at": "2026-11-19T09:12:12.054Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 11,
+  "fields": {
+    "title": "Django for Beginners",
+    "slug": "django-for-beginners",
+    "author": "William Vincent",
+    "category": 5,
+    "description": "A great book: Django for Beginners by William Vincent.",
+    "price": "30.00",
+    "discount_price": "25.00",
+    "cover": "",
+    "stock": 20,
+    "is_featured": true,
+    "is_new": true,
+    "created_at": "2026-11-19T09:12:12.062Z",
+    "updated_at": "2026-11-19T09:12:12.062Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 12,
+  "fields": {
+    "title": "Charlotte Web",
+    "slug": "charlotte-web",
+    "author": "E.B. White",
+    "category": 4,
+    "description": "A great book: Charlotte Web by E.B. White.",
+    "price": "9.99",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.068Z",
+    "updated_at": "2026-11-19T09:12:12.069Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 13,
+  "fields": {
+    "title": "To Kill a Mockingbird",
+    "slug": "to-kill-a-mockingbird",
+    "author": "Harper Lee",
+    "category": 1,
+    "description": "A great book: To Kill a Mockingbird by Harper Lee.",
+    "price": "12.00",
+    "discount_price": "9.00",
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.079Z",
+    "updated_at": "2026-11-19T09:12:12.079Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 14,
+  "fields": {
+    "title": "The Selfish Gene",
+    "slug": "the-selfish-gene",
+    "author": "Richard Dawkins",
+    "category": 2,
+    "description": "A great book: The Selfish Gene by Richard Dawkins.",
+    "price": "14.50",
+    "discount_price": null,
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": false,
+    "created_at": "2026-11-19T09:12:12.085Z",
+    "updated_at": "2026-11-19T09:12:12.085Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 15,
+  "fields": {
+    "title": "World War II",
+    "slug": "world-war-ii",
+    "author": "Antony Beevor",
+    "category": 3,
+    "description": "A great book: World War II by Antony Beevor.",
+    "price": "20.00",
+    "discount_price": "16.00",
+    "cover": "",
+    "stock": 20,
+    "is_featured": false,
+    "is_new": true,
+    "created_at": "2026-11-19T09:12:12.093Z",
+    "updated_at": "2026-11-19T09:12:12.093Z"
+  }
+}
+]
